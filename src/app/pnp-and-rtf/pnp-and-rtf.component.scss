@@ -1,0 +1,76 @@
+ul{
+    list-style-type: none;
+    padding: 0;
+  }
+/* Grid Container */
+#Slider-template--16907417092317__featured_collection_LTzyHp {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 16px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Card Styles */
+.card-wrapper {
+    background: white; /* Card background */
+    overflow: hidden; /* Ensure child elements don't overflow */
+    transition: transform 0.2s; /* Smooth scaling effect */
+    height: 380px;
+}
+
+.card-wrapper:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+    height: 380px;
+}
+
+/* Card Media */
+.card__media img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove gaps */
+}
+
+/* Card Content */
+.card__content {
+    padding: 16px; /* Inner padding */
+}
+
+.card__heading {
+    font-size: 16px; /* Heading size */
+    margin-bottom: 8px; /* Space below heading */
+    color: #333; /* Darker text for contrast */
+}
+.value{
+    font-size: 16px; /* Heading size */
+    margin-bottom: 8px; /* Space below heading */
+    color: #333; /* Darker text for contrast */
+}
+
+/* Price Styling */
+.price {
+    margin-top: 8px; /* Space above price */
+}
+
+.price-item--regular {
+    color: #888; /* Regular price in gray */
+    text-decoration: line-through; /* Strikethrough for regular price */
+}
+
+.price-item--sale {
+    color: #d9534f; /* Sale price in red */
+    font-weight: bold; /* Bold for emphasis */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #Slider-template--16907417092317__featured_collection_LTzyHp {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns on smaller screens */
+    }
+
+    .card__content {
+        padding: 12px; /* Adjust padding on smaller screens */
+    }
+
+    .card__heading {
+        font-size: 14px; /* Smaller heading size */
+    }
+}

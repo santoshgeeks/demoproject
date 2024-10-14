@@ -1,0 +1,84 @@
+/* General styles for the grid */
+.grid {
+    display: grid;
+    gap: 10px;  /* Adjust the gap between grid items */
+  }
+  
+  /* Two-column layout for tablet and smaller screens */
+  .grid--2-col-tablet-down {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+  
+  @media (max-width: 990px) {
+    .grid--2-col-tablet-down {
+      grid-template-columns: 1fr;  /* Stacks items on smaller screens */
+    }
+  }
+  
+  /* Four-column layout for desktop */
+  .grid--4-col-desktop {
+    grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
+  }
+  
+  @media (max-width: 1300px) {
+    .grid--4-col-desktop {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on smaller desktop screens */
+    }
+  }
+  
+  /* Styling for individual grid items */
+  .grid__item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f6f6f6;
+  }
+  
+  .grid__item:hover {
+    transform: translateY(-10px);  /* Adds hover effect to lift the card slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Darkens shadow on hover */
+  }
+  
+  /* Multicolumn card styles */
+  .multicolumn-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers the image and text */
+  }
+  
+  .multicolumn-card__image-wrapper {
+    max-width: 150px;  /* Sets a max width for the image container */
+    margin-bottom: 15px;  /* Adds space below the image */
+  }
+  
+  .multicolumn-card__image {
+    width: 100%;  /* Makes the image responsive */
+    // height: auto;  /* Keeps the aspect ratio */
+    height: 50px;
+    object-fit: contain;  /* Ensures the image fits within the container */
+  }
+  
+  .multicolumn-card__info h3 {
+    font-size: 18px;
+    color: #333;  /* Basic color for text */
+    margin: 10px 0;
+  }
+  
+  /* Responsive media queries */
+  @media (max-width: 750px) {
+    .grid--2-col-tablet-down, .grid--4-col-desktop {
+      grid-template-columns: 1fr;  /* One column layout on small screens */
+    }
+  
+    .multicolumn-card__image-wrapper {
+      max-width: 100px;  /* Smaller image on mobile */
+    }
+  
+    .multicolumn-card__info h3 {
+      font-size: 16px;  /* Smaller font size for mobile */
+    }
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
